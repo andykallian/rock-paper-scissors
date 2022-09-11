@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+
+
+:root{
+  --Scissors-Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+  --Paper-Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+  --Rock-Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+  --Lizard-Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%;);
+  --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+  --Dark-Text: hsl(229, 25%, 31%);
+  --Score-Text: hsl(229, 64%, 46%);
+  --Header-Outline: hsl(217, 16%, 45%);
+  --White: hsl(0, 0%, 100%);
+
+  --Radial-Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+
+  font-size: 62.5%; /* 1rem = 10px */
+     /*my monitor resolution: 1360x768. 136rem x 76,8rem = */
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+
+}
+
+
+body{
+
+  width: 100vw;
+  height: 100vh;
+
+  color: var(--White);
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  background: hsl(237, 49%, 15%);
+  background: -webkit-linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background:    -moz-linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background:         linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+}
+
+
+
+.container{
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 14rem; */
+}
+
+
+.score-container{
+  width: 90%;
+  padding: 1rem;
+
+  border: 2px solid var(--White);
+  border-radius: .7rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.score{
+  width: 30%;
+  height: 100%;
+
+  background-color: var(--White);
+
+  border: 2px solid var(--White);
+  border-radius: .7rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.score h3{
+  color: var(--Score-Text);
+  font-size: 1.1rem;
+  letter-spacing: .2rem;
+}
+
+.score p{
+  color: var(--Dark-Text);
+  font-size: 3rem;
+  font-weight: 700;
+  font-stretch: extra-condensed;
+}
+
+.game-container{
+  width: 90%;
+  height: 65%;
+
+  border: 2px solid var(--White);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.images-container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.img-container{
+
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  position: absolute;
+}
+
+
+.red{
+
+  top: 20rem;
+
+  background: hsl(349, 71%, 52%);
+  background: -webkit-linear-gradient(hsl(349, 71%, 52%) to hsl(349, 70%, 56%));
+  background:    -moz-linear-gradient(hsl(349, 71%, 52%) to hsl(349, 70%, 56%));
+  background:         linear-gradient(hsl(349, 71%, 52%) to hsl(349, 70%, 56%));
+}
+
+.blue{
+
+  right: 65%;
+  top: 8rem;
+  background: hsl(230, 89%, 62%);
+  background: -webkit-linear-gradient(hsl(230, 89%, 62%) to hsl(230, 89%, 65%));
+  background:    -moz-linear-gradient(hsl(230, 89%, 62%) to hsl(230, 89%, 65%));
+  background:         linear-gradient(hsl(230, 89%, 62%) to hsl(230, 89%, 65%));
+
+}
+
+.yellow{
+
+  left: 65%;
+  top: 8rem;
+  background: hsl(39, 89%, 49%);
+  background: -webkit-linear-gradient(hsl(39, 89%, 49%) to hsl(40, 84%, 53%));
+  background:    -moz-linear-gradient(hsl(39, 89%, 49%) to hsl(40, 84%, 53%));
+  background:         linear-gradient(hsl(39, 89%, 49%) to hsl(40, 84%, 53%));
+
+}
+
+
+.img-background{
+  width:75%;
+  height:75%;
+  background-color: var(--White);
+  border-radius: 50%;
+}
+
+.paper{
+  background-image: url(images/icon-paper.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.scissors{
+  background-image: url(images/icon-scissors.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.rock{
+  background-image: url(images/icon-rock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+/* .img-container{
+  width: 10rem;
+  height: 10rem;
+  padding: 20px;
+
+  background-color: var(--White);
+
+  
+
+  border-radius: 50%; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper{
+  border: 2px solid ;
+}
+
+.images-container img{
+
+
+
+
+  
+} */
+
+
+
+
+.rules-container{
+  width: 40%;
+  padding: 1.5rem;
+  border: 2px solid var(--White);
+  border-radius: .7rem;
+
+  text-align: center;
+  letter-spacing: .5rem;
+}
