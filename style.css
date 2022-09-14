@@ -119,10 +119,13 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   position: relative;
 }
 
 .images-container{
+  width: 95%;
+  height: 55%;
 
   display: flex;
   justify-content: center;
@@ -142,14 +145,44 @@ body{
   align-items: center;
 
   cursor: pointer;
+}
 
+.user-choice{
+  left: 11%;
+}
+
+.machine-choice{
+  right: 11%;
+}
+
+.hidden{
+  display: none !important;
+  box-shadow: none;
+}
+
+.not-clickable{
+  pointer-events: none;
+}
+
+.user-choice, .machine-choice{
   position: absolute;
+  align-self: center !important;
+}
+
+.align-container{
+  justify-content: space-around;
+  position: relative;
+}
+
+.row-reverse{
+  flex-direction: row-reverse !important;
 }
 
 
 .red{
 
-  top: 20rem;
+  align-self: flex-start;
+
 
   background: hsl(349, 71%, 52%);
   background: -webkit-linear-gradient(hsl(349, 71%, 52%) to hsl(349, 70%, 56%));
@@ -159,8 +192,8 @@ body{
 
 .blue{
 
-  right: 65%;
-  top: 8rem;
+  align-self: flex-start;
+
   background: hsl(230, 89%, 62%);
   background: -webkit-linear-gradient(hsl(230, 89%, 62%) to hsl(230, 89%, 65%));
   background:    -moz-linear-gradient(hsl(230, 89%, 62%) to hsl(230, 89%, 65%));
@@ -170,8 +203,7 @@ body{
 
 .yellow{
 
-  left: 65%;
-  top: 8rem;
+  align-self: flex-end;
   background: hsl(39, 89%, 49%);
   background: -webkit-linear-gradient(hsl(39, 89%, 49%) to hsl(40, 84%, 53%));
   background:    -moz-linear-gradient(hsl(39, 89%, 49%) to hsl(40, 84%, 53%));
@@ -208,35 +240,40 @@ body{
   background-size: 50%;
 }
 
-/* .img-container{
-  width: 10rem;
-  height: 10rem;
-  padding: 20px;
 
-  background-color: var(--White);
 
-  
-
-  border-radius: 50%; 
+.play-again{
+  border: 1px solid red;
+  width: 95%;
+  height: 35%;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.paper{
-  border: 2px solid ;
+.hide{
+  display: none !important;
 }
 
-.images-container img{
+.result{
+  font-size: 60px;
+  width: 70%;
+  text-align: center;
+}
 
+.reset{
+  width: 70%;
+  height: 45px;
+  border-radius: .7rem;
+  letter-spacing: .15rem;
 
+  background-color: #fff;
 
-
-  
-} */
-
+  cursor: pointer;
+}
 
 
 
@@ -248,4 +285,12 @@ body{
 
   text-align: center;
   letter-spacing: .5rem;
+}
+
+
+
+@media screen and (min-width: 480px) {
+  .container{
+    width: 36rem;
+  }
 }
